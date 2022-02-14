@@ -12,12 +12,18 @@ class LogInForm extends Component {
 
         this.state = { errors: []}
     }
+
+    componentWillUpdate(nextProps) {
+        if(!this.props.data.user && nextProps.data.user) {
+            hashHistory.push('/dashboard')
+        }
+    }
+
     onSubmit({email, password}) {
         this.props.mutate({
             variables: { email, password},
             refetchQueries: [{ query }]
-        }).then( () => hashHistory.push('/'))
-        .catch( res => {
+        }).catch( res => {
             const errors = res.graphQLErrors.map(error => error.message)
             this.setState({errors});
         } );
@@ -36,4 +42,6 @@ class LogInForm extends Component {
     }
 }
 
-export default graphql(mutation)(LogInForm);
+export default graphql(query)
+(graphql(mutation)(LogInForm)
+);
