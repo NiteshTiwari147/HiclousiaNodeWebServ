@@ -46,8 +46,8 @@ class Header extends Component {
     render() {
         return (
             <nav>
-                <Link to='/' className='brand-logo left'>
-                    Home
+                <Link to='/' className='brand-logo left padding-left '>
+                    Hiclousia
                 </Link>
                 <div className='nav-wrapper'>
                     <ul className='right'>

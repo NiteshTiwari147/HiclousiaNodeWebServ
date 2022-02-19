@@ -12,7 +12,7 @@ const schema = require('./schema/schema');
 const app = express();
 
 // Replace with your mongoLab URI
-const MONGO_URI = 'mongodb://nittiwari:nitesh147@auth-shard-00-00.ny079.mongodb.net:27017,auth-shard-00-01.ny079.mongodb.net:27017,auth-shard-00-02.ny079.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-10seb0-shard-0&authSource=admin&retryWrites=true&w=majority'
+const MONGO_URI = 'mongodb://nittiwari:nitesh147@hiclousia-db-shard-00-00.partm.mongodb.net:27017,hiclousia-db-shard-00-01.partm.mongodb.net:27017,hiclousia-db-shard-00-02.partm.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-tq8yt0-shard-0&authSource=admin&retryWrites=true&w=majority'
 
 // Mongoose's built in promise library is deprecated, replace it with ES2015 Promise
 mongoose.Promise = global.Promise;
@@ -47,7 +47,7 @@ app.use(passport.session());
 
 // Instruct Express to pass on any request made to the '/graphql' route
 // to the GraphQL instance.
-app.use('/graphql', expressGraphQL({
+app.use('/hiclousiaGQL', expressGraphQL({
   schema,
   graphiql: true
 }));

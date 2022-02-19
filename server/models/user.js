@@ -7,6 +7,7 @@ const Schema = mongoose.Schema;
 // plain text - see the authentication helpers below.
 const UserSchema = new Schema({
   email: String,
+  username: String,
   password: String
 });
 
