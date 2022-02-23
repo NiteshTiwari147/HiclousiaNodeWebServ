@@ -15,7 +15,7 @@ const CandidateType = new GraphQLObjectType({
         lastName: { type: GraphQLString },
         email: { type: GraphQLString},
         username: { type: GraphQLString },
-        age: { type: GraphQLInt},
+        age: { type: GraphQLString},
         EducationList: {
             type: new GraphQLList(EducationType),
             resolve(parentValue) {

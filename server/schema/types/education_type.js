@@ -8,8 +8,8 @@ const EducationType = new GraphQLObjectType({
         school : { type: GraphQLString},
         degree :  { type: GraphQLString},
         field_of_study:  { type: GraphQLString},
-        start_year:  { type: GraphQLInt},
-        end_year:  { type: GraphQLInt},
+        start_year:  { type: GraphQLString},
+        end_year:  { type: GraphQLString},
         grade:  { type: GraphQLString},
     }
 });

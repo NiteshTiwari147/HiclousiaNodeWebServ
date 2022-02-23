@@ -6,8 +6,8 @@ const EducationSchema = new Schema({
     school : { type: String},
     degree :  { type: String},
     field_of_study:  { type: String},
-    start_year:  { type: Number, default: 2012},
-    end_year:  { type: Number, default: 2016},
+    start_year:  { type: String},
+    end_year:  { type: String},
     grade:  { type: String},
 });
 

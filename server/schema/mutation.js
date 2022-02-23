@@ -14,7 +14,7 @@ const mutation = new GraphQLObjectType({
             args: {
                 firstName: { type: GraphQLString},
                 lastName: { type: GraphQLString },
-                age: { type: GraphQLInt},
+                age: { type: GraphQLString},
             },
             resolve(parentValue, { firstName, lastName, age}, req) {
                const { id, email, username } = req.user;
@@ -27,8 +27,8 @@ const mutation = new GraphQLObjectType({
                 school : { type: GraphQLString},
                 degree :  { type: GraphQLString},
                 field_of_study:  { type: GraphQLString},
-                start_year:  { type: GraphQLInt},
-                end_year:  { type: GraphQLInt},
+                start_year:  { type: GraphQLString},
+                end_year:  { type: GraphQLString},
                 grade:  { type: GraphQLString},
             },
             resolve(parentValue, { school, degree, field_of_study, start_year, end_year, grade}, req) {
