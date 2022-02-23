@@ -3,6 +3,7 @@ import { graphql } from 'react-apollo';
 import { Link } from 'react-router';
 import query from '../queries/currentUser';
 import logOut from '../mutation/logOutMutation';
+import reactImage from '../images/react-js.svg';
 
 class Header extends Component {
 
@@ -45,10 +46,11 @@ class Header extends Component {
 
     render() {
         return (
-            <nav>
-                <Link to='/' className='brand-logo left padding-left '>
+            <nav style={{'background': 'skyblue'}}>
+                <Link to='/' className='brand-logo left padding-left'>
                     Hiclousia
                 </Link>
+                {/* <img src={reactImage} alt="" />; */}
                 <div className='nav-wrapper'>
                     <ul className='right'>
                         {this.renderButtons()}
