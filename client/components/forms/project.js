@@ -31,7 +31,7 @@ class AddProject extends Component {
         this.props.mutate({
             variables: {tittle, problemStatement, solution, softSkills, coreSkills, duration},
             refetchQueries: [{ query }]
-        }).then( res => hashHistory.push('/addExperience'))
+        }).then( res => hashHistory.push('/dashboard'))
         .catch( res => {
             const errors = res.graphQLErrors.map(error => error.message)
             this.setState({errors});

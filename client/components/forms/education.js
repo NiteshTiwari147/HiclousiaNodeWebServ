@@ -17,7 +17,7 @@ class AddEducation extends Component {
         this.props.mutate({
             variables: { school, degree, field_of_study, start_year, end_year, grade},
             refetchQueries: [{ query }]
-        }).then( res => hashHistory.push('/fillProject'))
+        }).then( res => hashHistory.push('/addExperience'))
         .catch( res => {
             const errors = res.graphQLErrors.map(error => error.message)
             this.setState({errors});
