@@ -42,8 +42,8 @@ const mutation = new GraphQLObjectType({
             args: {
                 organisation: {type: GraphQLString},
                 position: { type: GraphQLString},
-                start_year:  { type: GraphQLInt},
-                end_year: { type: GraphQLInt,},
+                start_year:  { type: GraphQLString},
+                end_year: { type: GraphQLString,},
                 current: { type: GraphQLBoolean}
             },
             resolve(parentValue, {organisation, position, start_year, end_year, current}, req) {

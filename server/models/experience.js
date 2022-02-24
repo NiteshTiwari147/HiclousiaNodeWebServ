@@ -5,8 +5,8 @@ const ExperienceSchema = new Schema({
     email: { type: String},
     organisation: {type: String},
     position: { type: String},
-    start_year:  { type: Number, default: 2012},
-    end_year: { type: Number, default: 0},
+    start_year:  { type: String},
+    end_year: { type: String},
     current: { type: Boolean}
 });
 

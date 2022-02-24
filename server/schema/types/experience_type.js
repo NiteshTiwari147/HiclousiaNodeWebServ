@@ -7,8 +7,8 @@ const ExperienceType = new GraphQLObjectType({
         email: { type: GraphQLString},
         organisation: {type: GraphQLString},
         position: { type: GraphQLString},
-        start_year:  { type: GraphQLInt},
-        end_year: { type: GraphQLInt,},
+        start_year:  { type: GraphQLString},
+        end_year: { type: GraphQLString,},
         current: { type: GraphQLBoolean}
     }
 });
