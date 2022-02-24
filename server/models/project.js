@@ -5,7 +5,7 @@ const ProjectSchema = new Schema({
     email: { type: String},
     title: { type: String},
     problemStatement: { type: String},
-    Solution: { type: String},
+    solution: { type: String},
     coreSkills: [{
         type: String
     }],
