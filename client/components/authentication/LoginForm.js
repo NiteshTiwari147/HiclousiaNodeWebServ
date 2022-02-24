@@ -30,11 +30,14 @@ class LogInForm extends Component {
     }
     render() {
         return (
-            <div className="loginBox right">
-                <h3>Log In </h3>
+            <div className="form_container">
+                <div className='form_title'>
+                    <h3>LOG IN !!</h3>
+                </div>
                 <AuthForm 
                 onSubmit={this.onSubmit.bind(this)} 
                 errors={this.state.errors}
+                msg="LOG ME IN"
                 />
             </div>
 

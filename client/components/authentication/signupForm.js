@@ -29,11 +29,14 @@ class SignUpForm extends Component {
     }
     render() {
         return (
-            <div>
-                <h3>Sign Up</h3>
+            <div className="form_container">
+                <div className='form_title'>
+                    <h3>SIGN UP</h3>
+                </div>
                 <AuthForm 
                 onSubmit={this.onSubmit.bind(this)} 
                 errors={this.state.errors}
+                msg="SIGN ME UP"
                 />
             </div>
 
