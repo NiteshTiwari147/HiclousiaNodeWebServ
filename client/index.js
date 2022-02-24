@@ -13,6 +13,7 @@ import signupForm from './components/authentication/signupForm';
 import BasicInfoForm from './components/forms/basicInfo';
 import AddEducation from './components/forms/education';
 import AddProject from './components/forms/project';
+import AddExperience from './components/forms/experience';
 
 import './styles.css';
 
@@ -39,6 +40,7 @@ const Root = () => {
           <Route path="fillBasicInfo" component={requireAuth(BasicInfoForm)} />
           <Route path="fillEducation" component={requireAuth(AddEducation)} />
           <Route path="fillProject" component={requireAuth(AddProject)} />
+          <Route path="addExperience" component={requireAuth(AddExperience)} />
           </Route>
       </Router>
     </ApolloProvider>

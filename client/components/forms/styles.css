@@ -1,0 +1,38 @@
+.form_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form_title {
+    text-align: center;
+}
+
+.form_inputBox{
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.formContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.btnOption {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-around;
+}
+
+.skill_options {
+    flex-direction: row;
+    display: flex;
+}
+
+.addedSkill {
+    margin-left: 1rem;
+    flex-direction: row;
+    display: flex;
+}
