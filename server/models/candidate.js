@@ -86,13 +86,13 @@ CandidateSchema.statics.updateSkill = function(email, coreSkills, softSkills) {
                 const skillList = [];
                 coreSkills.map(skill => {
                     skillList.push({
-                        skillName: skill.toLowerCase(),
+                        skillName: skill.toLowerCase().trim(),
                         skillPoint: 1
                     })
                 });
                 softSkills.map(skill => {
                     skillList.push({
-                        skillName: skill.toLowerCase(),
+                        skillName: skill.toLowerCase().trim(),
                         skillPoint: 1
                     })
                 });

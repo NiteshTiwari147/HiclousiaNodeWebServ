@@ -23,7 +23,7 @@ SkillSetSchema.statics.updateSkillSet = function(email,coreSkills,softSkills) {
             coreSkills.map(skill => {
                 let found_flag = false;
                 for(let i=0; i<skillList.length; i++) {
-                    if(skill === skillList[i].skillName) {
+                    if(skill.toLowerCase().trim() === skillList[i].skillName) {
                         skillList[i].skillPoint++;
                         found_flag = true;
                         break;
@@ -31,7 +31,7 @@ SkillSetSchema.statics.updateSkillSet = function(email,coreSkills,softSkills) {
                 }
                 if(found_flag === false) {
                     skillList.push({
-                        skillName: skill.toLowerCase(),
+                        skillName: skill.toLowerCase().trim(),
                         skillPoint: 1
                     })
                 }
@@ -39,7 +39,7 @@ SkillSetSchema.statics.updateSkillSet = function(email,coreSkills,softSkills) {
             softSkills.map(skill => {
                 let found_flag = false;
                 for(let i=0; i<skillList.length; i++) {
-                    if(skill === skillList[i].skillName) {
+                    if(skill.toLowerCase().trim() === skillList[i].skillName) {
                         skillList[i].skillPoint++;
                         found_flag = true;
                         break;
@@ -47,7 +47,7 @@ SkillSetSchema.statics.updateSkillSet = function(email,coreSkills,softSkills) {
                 }
                 if(found_flag === false) {
                     skillList.push({
-                        skillName: skill.toLowerCase(),
+                        skillName: skill.toLowerCase().trim(),
                         skillPoint: 1
                     })
                 }
