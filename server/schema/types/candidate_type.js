@@ -6,6 +6,7 @@ const EducationType  = require('./education_type');
 const ExperienceType = require('./experience_type');
 const ProjectType = require('./project_type');
 const ScorecardType = require('./scoreCard_type');
+const SkillSetType = require('./skillSet_type');
 
 const CandidateType = new GraphQLObjectType({
     name: 'CandidateType',
@@ -42,6 +43,13 @@ const CandidateType = new GraphQLObjectType({
             resolve(parentValue) {
                 const { email } = parentValue;
                 return Candidate.findScorecard(email);
+            }
+        },
+        SkillSet: {
+            type: SkillSetType, 
+            resolve(parentValue) {
+                const { email } = parentValue;
+                return Candidate.findSkillSet(email);
             }
         }
     }

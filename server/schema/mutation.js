@@ -68,6 +68,7 @@ const mutation = new GraphQLObjectType({
             resolve(parentValue, {title, problemStatement, solution, coreSkills, softSkills, duration}, req) {
                 const { email } = req.user;
                 Candidate.updateScore(email);
+                Candidate.updateSkill(email, coreSkills,softSkills);
                 return Candidate.addProject(email, title, problemStatement, solution, coreSkills, softSkills, duration);
             }
 

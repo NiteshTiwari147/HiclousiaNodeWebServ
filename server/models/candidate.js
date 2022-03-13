@@ -4,6 +4,7 @@ const EducationSchema = require('./education');
 const ExperienceSchema = require('./experience');
 const ProjectSchema = require('./project');
 const ScorecardSchema = require('./scoreCard');
+const SkillSetSchema = require('./skillSet');
 
 const CandidateSchema = new Schema({
     id: { type: Schema.Types.ObjectId, },
@@ -31,6 +32,10 @@ const CandidateSchema = new Schema({
     Scorecard: {
         type: ScorecardSchema,
         ref: 'scorecard'
+    },
+    SkillSet: {
+        type: SkillSetSchema,
+        ref: 'skillSet'
     }
 });
 
@@ -69,6 +74,38 @@ CandidateSchema.statics.addProject = function(email, title, problemStatement, so
         })
 }
 
+CandidateSchema.statics.updateSkill = function(email, coreSkills, softSkills) {
+    //function to maintain SkillSet
+    const SkillSet =  mongoose.model('skillSet');
+    return this.findOne({email})
+        .then(candidate => {
+            if(candidate.SkillSet) {
+                SkillSet.updateSkillSet(email,coreSkills, softSkills);
+            }
+            else {
+                const skillList = [];
+                coreSkills.map(skill => {
+                    skillList.push({
+                        skillName: skill.toLowerCase(),
+                        skillPoint: 1
+                    })
+                });
+                softSkills.map(skill => {
+                    skillList.push({
+                        skillName: skill.toLowerCase(),
+                        skillPoint: 1
+                    })
+                });
+                const skillSet = new SkillSet({
+                    email,
+                    skillSet: skillList
+                });
+                candidate.SkillSet = skillSet;
+                return Promise.all([skillSet.save(), candidate.save()])
+            }       
+    })
+}
+
 CandidateSchema.statics.updateScore = function(email) {
     //function to maintain scorecard
     const Scorecard = mongoose.model('scorecard');
@@ -102,6 +139,10 @@ CandidateSchema.statics.findExperience = function(email) {
 CandidateSchema.statics.findScorecard = function(email) {
     const Scorecard = mongoose.model('scorecard');
     return Scorecard.getScorecard(email);
+}
+CandidateSchema.statics.findSkillSet = function(email) {
+    const SkillSet =  mongoose.model('skillSet');
+    return SkillSet.getSkillSet(email);
 }
 
 CandidateSchema.statics.findProject = function(email) {
