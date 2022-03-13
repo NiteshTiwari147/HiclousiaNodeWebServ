@@ -60,7 +60,6 @@ SkillSetSchema.statics.updateSkillSet = function(email,coreSkills,softSkills) {
 SkillSetSchema.statics.getSkillSet = function(email) {
     return this.findOne({ email })
     .then(skillSet => {
-        console.log(skillSet);
         return skillSet;
     });
 }
