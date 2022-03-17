@@ -5,6 +5,7 @@ const { GraphQLString, GraphQLNonNull } = require('graphql');
 const { GraphQLObjectType, GraphQLID } = graphql;
 const mongoose = require('mongoose');
 const Candidate = mongoose.model('candidate');
+const ScoreCard = mongoose.model('scorecard');
 
 const RootQueryType = new GraphQLObjectType({
   name: 'RootQueryType',
@@ -19,6 +20,7 @@ const RootQueryType = new GraphQLObjectType({
       type: CandidateType,
       resolve(parentValue, args , req) {
         const { email } = req.user;
+        ScoreCard.triggerUpdateGraph(email)
         return Candidate.findOne({ email });
       }
     }
