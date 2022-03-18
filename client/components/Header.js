@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router';
+
 import query from '../queries/currentUser';
 import logOut from '../mutation/logOutMutation';
 import reactImage from '../images/react-js.svg';
+import './styles.css';
 
 class Header extends Component {
 
@@ -14,6 +16,7 @@ class Header extends Component {
     }
     renderButtons() {
         const { loading, user} = this.props.data
+        const pgrp = window.location.hash;
         if(loading) {
             return (
                 <div>
@@ -21,23 +24,39 @@ class Header extends Component {
                 </div>
             )
         }
+        const isDashboard = pgrp.includes('dashboard');
+        const isMrkt = pgrp.includes('market');
         if(user) {
             return (
-                <li>
-                    <a onClick={this.onLogOutClick.bind(this)}>
-                        Log Out
-                    </a>
-                </li>
+                <div>
+                    {isDashboard && <li>
+                            <Link to='/marketAnalysis' className='headerBtn'>Market Analysis</Link>
+                        </li>}
+                    {isMrkt && <li>
+                            <Link to='/dashboard' className='headerBtn'>Dashboard</Link>
+                        </li>}
+                    <li>
+                        <Link to='/fillProject' className='headerBtn'>Account</Link>
+                    </li>
+                    <li>
+                        <Link to='/settings' className='headerBtn'>Settings</Link>
+                    </li>
+                    <li>
+                        <a onClick={this.onLogOutClick.bind(this)} className='headerBtn'>
+                            Log Out
+                        </a>
+                    </li>
+                </div>         
             )
         }
 
         return (
             <div>
                 <li>
-                    <Link to='/signup'>Sign Up</Link>
+                    <Link to='/signup' className='headerBtn'>Sign Up</Link>
                 </li>
                 <li>
-                    <Link to='/login'>Log In</Link>
+                    <Link to='/login' className='headerBtn'>Log In</Link>
                 </li>
             </div>
 
@@ -46,16 +65,20 @@ class Header extends Component {
 
     render() {
         return (
-            <nav style={{'background': 'skyblue'}}>
-                <Link to='/' className='brand-logo left padding-left'>
-                    Hiclousia
-                </Link>
-                {/* <img src={reactImage} alt="" />; */}
-                <div className='nav-wrapper'>
-                    <ul className='right'>
-                        {this.renderButtons()}
-                    </ul>  
-                </div>
+            <nav className='navigationBar'>
+                 <div className="navigationBarContent">
+                    <div >
+                        <Link to='/' className="brand-logo companyLogo">
+                            HICLOUSIA
+                        </Link>
+                    </div>
+                    {/* <img src={reactImage} alt="" />; */}
+                    <div className='nav-wrapper'>
+                        <ul className='right'>
+                            {this.renderButtons()}
+                        </ul>  
+                    </div>
+                 </div>
             </nav>
         )
     }

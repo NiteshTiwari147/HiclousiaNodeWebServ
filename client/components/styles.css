@@ -1,0 +1,26 @@
+.container {
+    background-color: #f8f8f8;
+    width: 75%;
+}
+
+.navigationBar {
+    height: 5rem;
+    background-color: #ffffff;
+}
+
+.navigationBarContent {
+    margin: 0rem 1rem 0rem 4rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+.companyLogo{
+    font-weight: 1000;
+    font-family: system-ui;
+    color: #0370ff !important;
+}
+
+.headerBtn {
+    color: #0370ff;
+    font-weight: 1000;
+    font-size: large;
+}

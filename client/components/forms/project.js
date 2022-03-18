@@ -4,7 +4,7 @@ import { hashHistory } from 'react-router';
 
 import './styles.css';
 import mutation from '../../mutation/forms/addProject';
-import query from '../../queries/currentUser';
+import query from '../../queries/getCandidateDetails';
 
 class AddProject extends Component {
     constructor(props) {

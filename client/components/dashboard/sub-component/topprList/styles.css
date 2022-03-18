@@ -1,0 +1,51 @@
+.topprListContainer {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    height: fit-content;
+    margin: 2rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px !important;
+    border: 2px solid white !important;
+    border-radius: 15px;
+    background: white;
+}
+
+.topprListTitle {
+    align-self: baseline;
+    color: #0370ff;
+    font-weight: 1000;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-family: system-ui;
+}
+
+.topprListItem {
+    display: flex;
+    width: 12rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top:1rem;
+    border: 0.02px solid white;
+    box-shadow: .2px .2px #0370ff;
+}
+
+.topprListRank {
+    margin-right: 1rem;
+    color: #0370ff;;
+}
+
+.topprListImage {
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border: 0.5px solid white;
+    border-radius: 50%;
+}
+
+.topprListName {
+    font-weight: 800;
+    color: #0370ff;
+    font-family: inherit;
+}

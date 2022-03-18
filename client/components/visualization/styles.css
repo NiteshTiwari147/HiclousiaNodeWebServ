@@ -1,0 +1,92 @@
+.skillsPieChart {
+    font-family: sans-serif;
+    text-align: center;
+    width: 15rem;
+    height: fit-content;
+    justify-content: center;
+    margin: 2rem;
+    padding: 0rem !important;
+    border: 2px solid white !important;
+    background: white;
+    border-radius: 15px;
+}
+
+.topSkillBarGraphBox {
+    font-family: sans-serif;
+    text-align: center;
+    width: 15rem;
+    height: fit-content;
+    justify-content: center;
+    margin: 2rem;
+    border: 2px solid white !important;
+    background: white;
+    border-radius: 15px;
+}
+
+.scoreGraphContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 15rem;
+    height: 20rem;
+    margin: 2rem;
+    margin-bottom: 0rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white !important;
+    border-radius: 15px;
+    background: white;
+}
+
+.visualLegend { 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.smallContainerTitle {
+    color: #0370ff;
+    font-weight: 1000;
+    font-family: system-ui;
+}
+
+.jobsBarGraphContainer {
+    font-family: sans-serif;
+    text-align: center;
+    width: 40%;
+    height: fit-content;
+    justify-content: center;
+    margin-left: 2rem;
+    border: 2px solid white !important;
+    background: white;
+    border-radius: 15px;
+}
+
+.jobStatContainer {
+    font-family: sans-serif;
+    text-align: center;
+    width: 60%;
+    height: fit-content;
+    justify-content: center;
+    margin-left: 2rem;
+    border: 2px solid white !important;
+    background: white;
+    border-radius: 15px;
+}
+
+.tableRow {
+    border-radius: 5px;  
+}
+
+.tableData {
+    text-align: center;
+    font-family: monospace;
+}
+
+.tableHeader {
+    text-align: center;
+    background-color: #0370ff;
+    color: white;
+    padding: 5px;
+    font-size: smaller;
+    font-family: inherit;
+}

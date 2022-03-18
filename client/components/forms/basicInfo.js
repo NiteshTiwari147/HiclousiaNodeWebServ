@@ -26,9 +26,11 @@ class BasicInfoForm extends Component {
     }
     render() {
         return (
-            <div>
-            <h3>Fill your basic information</h3>
-            <div className="row">
+            <div className='form_container'>
+            <div className='form_title'>
+                    <h3>Fill Basic Information</h3>
+                </div>
+            <div className="row formContent">
                 <form className="col s16" onSubmit={this.onSubmit.bind(this)} >
                     <div className="input-field">
                         <input 

@@ -14,6 +14,9 @@ import BasicInfoForm from './components/forms/basicInfo';
 import AddEducation from './components/forms/education';
 import AddProject from './components/forms/project';
 import AddExperience from './components/forms/experience';
+import Sample from './components/sample/sample';
+import Dashboard from './components/dashboard';
+import MarketAnalysis from './components/marketAnalysis';
 
 import './styles.css';
 
@@ -41,6 +44,9 @@ const Root = () => {
           <Route path="fillEducation" component={requireAuth(AddEducation)} />
           <Route path="fillProject" component={requireAuth(AddProject)} />
           <Route path="addExperience" component={requireAuth(AddExperience)} />
+          <Route path="sample" component={requireAuth(Sample)} />
+          <Route path="dashboard" component={requireAuth(Dashboard)} />
+          <Route path="marketAnalysis" component={requireAuth(MarketAnalysis)} />
           </Route>
       </Router>
     </ApolloProvider>

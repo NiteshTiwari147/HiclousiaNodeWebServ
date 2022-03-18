@@ -1,0 +1,33 @@
+.marketAnalysisLayout {
+    display: flex;
+    flex-direction: column;
+}
+
+.jobAnalysisHeading {
+    width: inherit;
+    color: grey;
+    margin: 1rem;
+}
+
+.analysisRow {
+    display: flex;
+    flex-direction: row;
+    height: 20rem;
+    margin: 1rem;
+    border: 2px solid white !important;
+    border-radius: 7px;
+    background: white;
+}
+
+.recommendationHeading {
+    width: inherit;
+    color: grey;
+    margin: 1rem;
+}
+
+.recommendation {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

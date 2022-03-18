@@ -41,7 +41,7 @@ class AddEducation extends Component {
         return(
             <div className='form_container'>
                 <div className='form_title'>
-                    <h3>Fill your basic information</h3>
+                    <h3>Fill Education Information</h3>
                 </div>
                 <div className="row">
                 <form className="col s16 formContent">
