@@ -80,7 +80,6 @@ const updateGraph = function(scoreCard) {
 ScorecardSchema.statics.triggerUpdateGraph = function(email) {
     return this.findOne({email})
         .then(scoreCard =>{
-            console.log(scoreCard);
             if(scoreCard.graph.length < 1) {
                 scoreCard.graph = generateGraph();
             }  
