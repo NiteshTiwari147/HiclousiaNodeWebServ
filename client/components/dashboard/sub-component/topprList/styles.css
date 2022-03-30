@@ -14,7 +14,7 @@
 
 .topprListTitle {
     align-self: baseline;
-    color: #0370ff;
+    color: #1072EB;
     font-weight: 1000;
     margin-left: 1rem;
     margin-bottom: 1rem;
@@ -28,12 +28,12 @@
     margin-bottom: 1rem;
     margin-top:1rem;
     border: 0.02px solid white;
-    box-shadow: .2px .2px #0370ff;
+    box-shadow: .2px .2px #1072EB;
 }
 
 .topprListRank {
     margin-right: 1rem;
-    color: #0370ff;;
+    color: #1072EB;;
 }
 
 .topprListImage {
@@ -46,6 +46,6 @@
 
 .topprListName {
     font-weight: 800;
-    color: #0370ff;
+    color: #1072EB;
     font-family: inherit;
 }

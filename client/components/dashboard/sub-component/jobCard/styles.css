@@ -4,7 +4,9 @@
     width: 21rem;
     height: fit-content;
     margin: 1rem;
-    border: 2px solid #0370ff;
+    border: 2px solid white !important;
+    border-radius: 7px;
+    padding: 0px !important;
     border-radius: 15px;
     background: white;
 }
@@ -12,18 +14,60 @@
 .companyImage {
     margin-top: 1.8rem;
     margin-left:1rem;
-    width: 8rem;
-    height: 8rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 10px;
 }
 
+.jobCardHeadingContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
 .introduction {
+    display: flex;
+    width: inherit;
+    flex-direction: column;
     margin-top: 1rem;
-    margin-left: 1rem;
+    margin-left: 3rem;
     height: 150px;
+}
+
+.applyBtn {
+    border-radius: 5px;
+    background: white;
 }
 
 .stateBoxContainer {
     display: flex;
     flex-wrap: wrap;
+}
+
+.unMatchedHeader {
+    color: red
+}
+
+.matchedHeader {
+    color: green
+}
+
+.matchedSkill {
+    display: flex;
+    border: 2px solid green !important;
+    border-radius: 3px;
+    color: grey;
+    justify-content: center;
+}
+
+.toolTip {
+    border-radius: 1rem !important;
+    opacity: 0.19 !important;
+}
+
+.unMatchedSkill {
+    display: flex;
+    color: grey;
+    border: 2px solid red !important;
+    justify-content: center;
+    border-radius: 3px;
 }

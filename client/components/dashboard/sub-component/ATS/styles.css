@@ -20,7 +20,7 @@
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    border: 2px solid #0370ff;
+    border: 2px solid #1072EB;
     background: #e2efff;
     border-radius: 9px;
 }
@@ -32,12 +32,12 @@
     align-items: flex-start;
     margin-left: 1rem;
     font-family: system-ui;
-    color: #0370ff;
+    color: #1072EB;
 }
 
 .ATS_score {
     font-weight: 1000;
     font-size: large;
     font-family: inherit;
-    color: #0370ff;
+    color: #1072EB;
 }

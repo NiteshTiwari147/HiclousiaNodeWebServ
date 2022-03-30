@@ -44,7 +44,7 @@
 }
 
 .smallContainerTitle {
-    color: #0370ff;
+    color: #1072EB;
     font-weight: 1000;
     font-family: system-ui;
 }
@@ -84,7 +84,7 @@
 
 .tableHeader {
     text-align: center;
-    background-color: #0370ff;
+    background-color: #1072EB;
     color: white;
     padding: 5px;
     font-size: smaller;

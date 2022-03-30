@@ -11,7 +11,7 @@
 }
 
 .projectImage {
-    width: 40rem;
+    width: 20rem;
     height: 13rem;
     border-radius: 15px 15px 0px 0px;
 }
@@ -32,16 +32,50 @@
 }
 
 .projectStatTitle{
-    color: #0370ff;
+    color: #1072EB;
     font-weight: 1000;
     font-family: system-ui;
 }
 
+.projectInfoContainer {
+    width: 15rem;
+    height: 4rem;
+    /* color: #1072EB;
+    font-size: larger;
+    font-weight: 1000;
+    font-family: system-ui; */
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
 .projectTitle {
-    color: #0370ff;
+    color: #1072EB;
+    font-size: larger;
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    overflow: hidden;
     font-weight: 1000;
     font-family: system-ui;
     margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.skillBox {
+    width: 6rem;
+    border-radius: 5px;
+    padding: 5px;
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    overflow: hidden;
+    margin: 2px;
+    font-size: small;
+    border: 2px solid grey;
 }
 
 .projectDetailsBtn {
@@ -49,6 +83,6 @@
     width: 7rem;
     height: 2rem;
     background: #e2efff;
-    border: 2px solid #0370ff;
-    color: #0370ff;
+    border: 2px solid #1072EB;
+    color: #1072EB;
 }
