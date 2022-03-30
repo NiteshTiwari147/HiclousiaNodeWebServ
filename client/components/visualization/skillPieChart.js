@@ -39,13 +39,14 @@ class SkillPieChart extends Component {
                 <RadialChart
                     colorDomain={[0, 100]}
                     colorRange={[0, 20]}
+                    color='orange'
                     margin={{top: 100}}
                     animation={true}
                     data={data}
                     labelsRadiusMultiplier={1.1}
                     labelsStyle={{fontSize: 8, fill: 'blue'}}
                     showLabels
-                    style={{stroke: '#fff', strokeWidth: 2}}
+                    style={{stroke: 'red', strokeWidth: 2}}
                     width={225}
                     height={200}
                     />
