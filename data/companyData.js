@@ -40,6 +40,41 @@ const companyData = [
         slryRnge: '180k-250k',
         skills: '18',
         url: "https://cdn.cdnlogo.com/logos/o/54/oracle.svg"
+    },
+    {
+        name: 'Google',
+        position: 'SDE-1',
+        slryRnge: '110k-150k',
+        skills: '8',
+        url: "https://cdn.cdnlogo.com/logos/g/35/google-icon.svg"
+    },
+    {
+        name: 'Twitter',
+        position: 'SDE-2',
+        slryRnge: '160k-220k',
+        skills: '16',
+        url: "https://cdn.cdnlogo.com/logos/t/39/twitter.svg"
+    },
+    {
+        name: 'Zomato',
+        position: 'SDE-2',
+        slryRnge: '140k-190k',
+        skills: '12',
+        url:"https://cdn.cdnlogo.com/logos/z/41/zomato.png"
+    },
+    {
+        name: 'Samsung',
+        position: 'SDE-3',
+        slryRnge: '240k-290k',
+        skills: '21',
+        url:"https://cdn.cdnlogo.com/logos/s/27/samsung.svg"
+    },
+    {
+        name: 'Rivian',
+        position: 'SDE-2',
+        slryRnge: '220k-290k',
+        skills: '19',
+        url:"https://cdn.cdnlogo.com/logos/r/41/rivian-wordmark.svg"
     }
 ]
 
