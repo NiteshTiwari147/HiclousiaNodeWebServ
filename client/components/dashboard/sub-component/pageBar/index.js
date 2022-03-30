@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router';
 
 import './styles.css';
 
@@ -6,21 +7,15 @@ class PageBar extends Component {
     render() {
         return(
             <div className="pageBarContainer shadow">
-                <a className='pageBarBtn'>
-                    Education
-                </a>
-                <a className='pageBarBtn'>
-                    Experience
-                </a>
-                <a className='pageBarBtn highlight'>
-                    Projects
-                </a>
-                <a className='pageBarBtn'>
-                    Jobs
-                </a>
-                <a className='pageBarBtn'>
-                    Guidance
-                </a>
+                <Link to='addExperience' className='pageBarBtn'>
+                    Add Education
+                </Link>
+                <Link to='fillEducation' className='pageBarBtn'>
+                   Add Experience
+                </Link>
+                <Link to='fillProject' className='pageBarBtn highlight'>
+                    Add Projects
+                </Link>
             </div>
         )
     }

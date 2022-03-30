@@ -44,7 +44,7 @@ class Dashboard extends Component {
                     <ATS projectLen={ProjectList.length} skills={SkillSet.skillSet.length} />
                     <PageBar />
                     {false ? <JobCard />: null}
-                    {ProjectList ? ProjectList.map((value,index) => <Project key={index} data={value} /> ): null}
+                    {ProjectList ? ProjectList.map((value,index) => <Project key={index} idx={index} data={value} /> ): null}
                 </div>
                 <div className='dashboardStack'>
                     <Score data={Scorecard}/>

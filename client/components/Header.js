@@ -29,11 +29,11 @@ class Header extends Component {
         if(user) {
             return (
                 <div>
-                    {isDashboard && <li>
-                            <Link to='/marketAnalysis' className='headerBtn'>Market Analysis</Link>
-                        </li>}
-                    {isMrkt && <li>
+                    {!isDashboard && <li>
                             <Link to='/dashboard' className='headerBtn'>Dashboard</Link>
+                        </li>}
+                    {!isMrkt && <li>
+                            <Link to='/marketAnalysis' className='headerBtn'>Market Analysis</Link>
                         </li>}
                     <li>
                         <Link to='/fillProject' className='headerBtn'>Account</Link>
