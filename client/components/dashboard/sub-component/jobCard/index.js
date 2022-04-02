@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactTooltip from "react-tooltip";
+import CompanyEmployeesGraph from '../../../visualization/companyEmployeeGraphs';
 
 import './styles.css';
 import StatBox from "../statsBox";
@@ -36,8 +37,6 @@ const data = [
     }
 ];
 
-import { companyLogoData } from '../../../../../data/companyData';
-
 class JobCard extends Component {
     render() {
         const { logo, companyName, slryRnge, position, skills } = this.props;
@@ -51,7 +50,7 @@ class JobCard extends Component {
                         <h5 style={{marginBottom: '0.2rem'}}>{companyName}</h5>
                         <h7 style={{marginTop: '0.3rem', color: 'blue'}}>Read Job Description</h7>
                         <button style={{marginTop: '0.5rem', color: 'blue'}} className="applyBtn">
-                            Apply
+                            Apply 
                         </button>
                     </div>
                 </div>
@@ -61,27 +60,35 @@ class JobCard extends Component {
                     <StatBox title='Salary' value={slryRnge} />
                     <StatBox title='Compatibility' value='89%'/>
                 </div>
-                <ReactTooltip id='comp' place='top' effect="solid" className="toolTip" >
-                    <table>
-                    <tr className='tableRow'>
-                        <th className='matchedHeader'>
-                            Matched Skill
-                        </th>
-                        <th className='unMatchedHeader'>
-                            Un-Matched Skill
-                        </th>
-                    </tr>
-                    {data.map( obj => {
-                       return <tr>
-                            <td>
-                                {obj.match && <div className='matchedSkill'>{obj.match}</div>}
-                            </td>
-                            <td>
-                                {obj.unMatch && <div className='unMatchedSkill'>{obj.unMatch}</div>}
-                            </td>
-                        </tr>
-                    })}
-                    </table>
+                <ReactTooltip id='comp' effect="solid" className="toolTip" >
+                    <div>
+                        <div className="modalTitle">
+                            <h4>Detailed comparison with the job</h4>
+                        </div>
+                        <div className="jobComparison">
+                            <table>
+                                <tr className='tableRow'>
+                                    <th className='matchedHeader'>
+                                        Matched Skill
+                                    </th>
+                                    <th className='unMatchedHeader'>
+                                        Un-Matched Skill
+                                    </th>
+                                </tr>
+                                {data.map( obj => {
+                                return <tr>
+                                        <td>
+                                            {obj.match && <div className='matchedSkill'>{obj.match}</div>}
+                                        </td>
+                                        <td>
+                                            {obj.unMatch && <div className='unMatchedSkill'>{obj.unMatch}</div>}
+                                        </td>
+                                    </tr>
+                                })}
+                            </table>
+                            <CompanyEmployeesGraph companyName={'Facebook'} />
+                        </div>
+                    </div>
                 </ReactTooltip>
             </div>
         )
