@@ -35,6 +35,13 @@ const companyData = [
         url: "https://cdn.cdnlogo.com/logos/m/33/mastercard.svg"
     },
     {
+        name: 'Walmart',
+        position: 'SDE-2',
+        slryRnge: '120k-150k',
+        skills: '13',
+        url: "https://cdn.cdnlogo.com/logos/w/32/walmart.svg"
+    },
+    {
         name: 'Oracle',
         position: 'SDE-3',
         slryRnge: '180k-250k',
