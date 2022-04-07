@@ -22,6 +22,11 @@ class Dashboard extends Component {
         }
         const { ProjectList, firstName, lastName, SkillSet, Scorecard, ExperienceList }  = this.props.data.getCandidateBasicInfo;
         var designation, company;
+        var sum=0;
+        for (var i=0; i<10 && this.props.data.getCandidateBasicInfo; i++) {
+            sum = sum + Scorecard.graph[1].plotPoints[i].y; 
+        }
+        const  userScore = sum/10;
         ExperienceList.map(obj => {
             if(obj.current === true) {
                 designation = obj.position;
@@ -41,7 +46,7 @@ class Dashboard extends Component {
                     <SkillHorizontalBar data={SkillSet.skillSet}/>
                 </div>
                 <div className='dashboardStack'>
-                    <ATS projectLen={ProjectList.length} skills={SkillSet.skillSet.length} />
+                    <ATS projectLen={ProjectList.length} skills={SkillSet.skillSet.length} userScore={userScore}/>
                     <PageBar />
                     {false ? <JobCard />: null}
                     {ProjectList ? ProjectList.map((value,index) => <Project key={index} idx={index} data={value} /> ): null}
